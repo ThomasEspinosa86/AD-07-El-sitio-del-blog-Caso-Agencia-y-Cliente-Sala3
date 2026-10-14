@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1; /* empuja el footer al final aunque la página tenga poco contenido */
+}
+
+/* Inicio Navbar  */
+
+nav {
+    position: sticky; /* para que no se mueva al hacer scroll */
+    top: 0;
+    z-index: 1000;   /* queda por encima del contenido */
+    display: flex;
+    justify-content: space-between; /* logo a la izquierda, enlaces a la derecha */
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #1a1a2e;
+}
+
+nav > a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav ul{
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav ul a:hover {
+    color: #e94560;
+}
+
+
+
+/* aqui iniciar el footer */
+
+footer {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer ul {
+  list-style: none;
+  margin: 10px 0;
+  padding: 0;
+}
+
+footer p {
+  margin: 8px 0;
+}
