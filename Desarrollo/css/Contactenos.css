@@ -1,14 +1,15 @@
-
+/* --- Variables y Configuración Global --- */
 :root {
     --bg-color: #0d0d1a;
     --card-bg: #1a1a2e;
     --text-primary: #e1e1e6;
     --text-secondary: #a8a8b3;
     --accent-color: #65006e; 
-    --accent-hover: #00bcff;
+    --accent-hover: #00f5d4;
     --border-color: #29292e;
     --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
+
 
 * {
     margin: 0;
@@ -29,9 +30,10 @@ body {
 
 
 header {
-    max-width: 800px;
     width: 100%;
-    margin: 0 auto 2rem auto;
+    padding: 1rem 2rem; 
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color); 
 }
 
 nav a {
@@ -42,12 +44,13 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--accent-color);
+    color: var(--accent-hover);
 }
+
 
 main {
     max-width: 800px;
-    width: 100%;
+    width: 100%; 
     margin: 0 auto;
     flex: 1;
 }
@@ -102,7 +105,7 @@ textarea {
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-    border-color: var(--accent-color);
+    border-color: var(--accent-hover);
 }
 
 textarea {
@@ -111,7 +114,7 @@ textarea {
 
 button[type="submit"] {
     background-color: var(--accent-color);
-    color: #1a1a2e;
+    color: #e1e1e6;
     font-weight: 700;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -124,6 +127,7 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: var(--accent-hover);
+    color: #1a1a2e;
 }
 
 button[type="submit"]:active {
@@ -156,7 +160,6 @@ section li {
 section li strong {
     color: var(--text-primary);
 }
-
 
 footer {
     max-width: 800px;
