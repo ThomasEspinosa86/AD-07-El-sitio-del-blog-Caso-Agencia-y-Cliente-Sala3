@@ -3,49 +3,42 @@ body {
   background-color: #f0f0f5;
 }
 
-/* ===== Distribución general ===== */
+/* ===== Distribución general (una sola columna) ===== */
 main {
-  max-width: 1100px;    /* antes 500px */
-  width: 100%;          /* antes 1% (este era el problema) */
+  max-width: 800px;
+  width: 100%;
   margin: 0 auto;
-  padding: 15px 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  align-items: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;  /* todo se apila de arriba hacia abajo */
+  gap: 15px;
 }
 
-/* El título y la introducción ocupan todo el ancho */
-main h1,
+main h1 {
+  text-align: center;
+  margin: 0;
+  font-size: 1.8rem;
+  color: #1a1a2e;
+}
+
 main > p {
-  grid-column: 1 / -1;
   text-align: center;
   margin: 0;
 }
 
-main h1 {
-  color: #1a1a2e;
-  font-size: 1.8rem;
-}
-
-/* ===== Podio (columna izquierda) ===== */
-.podio {
-  grid-column: 1;
-  grid-row: 3 / span 3;
-}
-
+/* ===== Podio (arriba) ===== */
 .podio img {
-  width: auto;          /* respeta la proporción original */
-  max-width: 100%;
-  max-height: 35vh;     /* aquí controlas el tamaño */
   display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 50vh;     /* aquí controlas el tamaño de la imagen */
   margin: 0 auto;
   border-radius: 10px;
 }
 
-/* ===== Información de cada juego (columna derecha) ===== */
+/* ===== Información de cada juego (debajo de la imagen) ===== */
 .top-puesto {
-  grid-column: 2;
   background-color: #ffffff;
   padding: 12px 18px;
   border-left: 5px solid #e94560;
@@ -61,17 +54,4 @@ main h1 {
 
 .top-puesto p {
   margin: 0;
-}
-
-/* ===== Celulares y pantallas pequeñas ===== */
-@media (max-width: 800px) {   /* antes 100px */
-  main {
-    grid-template-columns: 1fr;
-  }
-
-  .podio,
-  .top-puesto {
-    grid-column: 1;
-    grid-row: auto;
-  }
 }

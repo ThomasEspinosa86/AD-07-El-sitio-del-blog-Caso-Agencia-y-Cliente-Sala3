@@ -1,152 +1,71 @@
-/* ===== CONFIGURACIÓN GENERAL ===== */
-
-:root {
-    --color-fondo: #0b0f19;
-    --color-tarjeta: #151c2c;
-    --color-principal: #8b5cf6;
-    --color-secundario: #00e5ff;
-    --color-texto: #f5f7fa;
-    --color-texto-secundario: #aab3c5;
-}
-
+/* ===== Base ===== */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 90px;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* ===== ENCABEZADO Y MENÚ ===== */
-
-header {
-    background-color: var(--color-tarjeta);
-    padding: 15px 8%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 2px solid var(--color-principal);
+main {
+  flex: 1; /* empuja el footer al final de la página */
 }
 
+/* ===== Navbar ===== */
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
+  position: sticky;   /* no se pierde al hacer scroll */
+  top: 0;
+  z-index: 1000;      /* queda por encima del contenido */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #1a1a2e;
 }
 
-nav a {
-    color: var(--color-texto);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+/* Enlace "VideoJuegoBlog" (hijo directo del nav) */
+nav > a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-nav a:hover {
-    color: var(--color-secundario);
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* ===== SECCIONES ===== */
-
-section {
-    padding: 70px 8%;
-    min-height: 60vh;
-    scroll-margin-top: 80px;
+nav ul a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
-section h2 {
-    color: var(--color-principal);
-    margin-bottom: 20px;
-    font-size: 2rem;
+nav ul a:hover {
+  color: #e94560;
 }
 
-section p {
-    color: var(--color-texto-secundario);
-    margin-bottom: 15px;
+/* ===== Footer ===== */
+footer {
+  background-color: #1a1a2e;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
 }
 
-/* ===== TÍTULO PRINCIPAL ===== */
-
-#inicio h1 {
-    font-size: 2.8rem;
-    margin-bottom: 15px;
-    color: var(--color-texto);
+footer ul {
+  list-style: none;
+  margin: 10px 0;
+  padding: 0;
 }
 
-#inicio h1 span {
-    color: var(--color-secundario);
+footer p {
+  margin: 8px 0;
 }
-
-/* ===== CONTENEDOR DE ARTÍCULOS ===== */
-
-.articulos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    margin-top: 30px;
-}
-
-/* ===== TARJETAS DE ARTÍCULOS ===== */
-
-.articulo {
-    background-color: var(--color-tarjeta);
-    border: 1px solid #30394d;
-    border-radius: 12px;
-    padding: 20px;
-    flex: 1 1 260px;
-    transition: transform 0.3s, border-color 0.3s;
-}
-
-.articulo:hover {
-    transform: translateY(-5px);
-    border-color: var(--color-principal);
-}
-
-.articulo img {
-    display: block;
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.articulo h3 {
-    color: var(--color-secundario);
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-}
-
-.articulo p {
-    color: var(--color-texto-secundario);
-}
-
-/* ===== QUIÉNES SOMOS ===== */
-
-#nosotros {
-    background-color: #101625;
-}
-
-/* ===== CONTACTO ===== */
-
-#contacto a {
-    color: var(--color-secundario);
-    text-decoration: none;
-}
-
-#contacto a:hover {
-    text-decoration: underline;
-}
-
-
-
