@@ -1,0 +1,77 @@
+/* ===== Fondo de la página ===== */
+body {
+  background-color: #f0f0f5;
+}
+
+/* ===== Distribución general ===== */
+main {
+  max-width: 1100px;    /* antes 500px */
+  width: 100%;          /* antes 1% (este era el problema) */
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+/* El título y la introducción ocupan todo el ancho */
+main h1,
+main > p {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin: 0;
+}
+
+main h1 {
+  color: #1a1a2e;
+  font-size: 1.8rem;
+}
+
+/* ===== Podio (columna izquierda) ===== */
+.podio {
+  grid-column: 1;
+  grid-row: 3 / span 3;
+}
+
+.podio img {
+  width: auto;          /* respeta la proporción original */
+  max-width: 100%;
+  max-height: 35vh;     /* aquí controlas el tamaño */
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+/* ===== Información de cada juego (columna derecha) ===== */
+.top-puesto {
+  grid-column: 2;
+  background-color: #ffffff;
+  padding: 12px 18px;
+  border-left: 5px solid #e94560;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.top-puesto h2 {
+  margin: 0 0 6px;
+  font-size: 1.2rem;
+  color: #1a1a2e;
+}
+
+.top-puesto p {
+  margin: 0;
+}
+
+/* ===== Celulares y pantallas pequeñas ===== */
+@media (max-width: 800px) {   /* antes 100px */
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .podio,
+  .top-puesto {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}

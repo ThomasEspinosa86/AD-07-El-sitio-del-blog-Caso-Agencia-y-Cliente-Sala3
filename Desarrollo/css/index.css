@@ -1,55 +1,21 @@
 
 :root {
-    --negro: #0d0d12;
-    --oscuro: #1a1638;
-    --blanco: #e5e7eb;
-    --morado: #65006e;
+    --fondo: #101c24;
+    --azul-petroleo: #173b4a;
+    --texto: #f0f7f6;
+    --verde: #38c9a5;
 }
-
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: var(--negro);
-    color: var(--blanco);
-}
-
-nav {
-    background-color: var(--oscuro);
-    padding: 10px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    padding: 0;
-    margin: 0;
-}
-
-nav a {
-    color: var(--blanco);
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: var(--morado);
-}
-
-header {
-    background-color: var(--oscuro);
-    color: var(--blanco);
-    text-align: center;
-    padding: 5px;
+    background: linear-gradient(135deg, #101c24, #162b38);
+    color: var(--texto);
 }
 
 h1 {
     font-size: 35px;
-    color: var(--morado);
+    color: var(--verde);
 }
 
 .contenido {
@@ -70,14 +36,15 @@ h1 {
     width: 100%;
     margin-bottom: 20px;
     border-radius: 10px;
+    border: 1px solid var(--azul-petroleo);
 }
 
 h2, h3, h4, h5, h6 {
-    color: var(--morado);
+    color: var(--verde);
 }
 
 p {
     font-size: 16px;
     line-height: 1.6;
-    color: var(--blanco);
+    color: var(--texto);
 }
