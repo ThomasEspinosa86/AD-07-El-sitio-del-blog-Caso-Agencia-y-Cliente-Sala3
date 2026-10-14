@@ -22,26 +22,7 @@ body {
     flex-direction: column;
 }
 
-header {
-    background-color: var(--fondo-claro);
-    padding: 1rem 2rem;
-    border-bottom: 2px solid var(--acento);
-    box-shadow: 0 4px 20px rgba(0, 245, 212, 0.25);
-}
 
-nav a {
-    color: var(--acento);
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: color 0.3s, text-shadow 0.3s;
-}
-
-nav a:hover {
-    color: var(--acento-2);
-    text-shadow: 0 0 10px var(--acento-2);
-}
 
 main {
     flex: 1;
@@ -67,14 +48,6 @@ p {
     text-align: justify;
 }
 
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: var(--fondo-claro);
-    border-top: 2px solid var(--acento);
-    color: var(--acento);
-    font-size: 0.9rem;
-}
 
 img{
     width: 100%;
